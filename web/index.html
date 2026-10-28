@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Honor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="rough" x="-10%" y="-30%" width="120%" height="160%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.035 0.08" numOctaves="3" seed="4" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="18"/>
+        </filter>
+    </svg>
+
+    <div id="barAnchor" class="anchor pos-bottom-center">
+        <div id="barWrap" class="hidden" data-mood="neutral">
+            <div id="head" class="head">
+                <div class="brush"></div>
+                <div id="badge" class="badge">
+                    <svg viewBox="0 0 64 64" aria-hidden="true">
+                        <circle class="ring" cx="32" cy="32" r="29"/>
+                        <circle class="ring-inner" cx="32" cy="32" r="23"/>
+                        <path class="glyph glyph-good" d="M32 13 37.6 25.6 51.3 27.1 41.1 36.4 44 50 32 43.1 20 50 22.9 36.4 12.7 27.1 26.4 25.6Z"/>
+                        <path class="glyph glyph-bad" d="M36 12 20 35H30L27 52 44 28H34Z"/>
+                        <circle class="glyph glyph-neutral" cx="32" cy="32" r="6"/>
+                    </svg>
+                </div>
+                <div class="head-text">
+                    <div class="label">Honor</div>
+                    <div class="line"><span id="title" class="title">Plain</span><span id="value" class="value"></span></div>
+                </div>
+            </div>
+
+            <div class="track">
+                <div class="base base-bad"></div>
+                <div class="base base-good"></div>
+                <div id="brightBad" class="bright bright-bad"></div>
+                <div id="brightGood" class="bright bright-good"></div>
+                <div class="tick"></div>
+                <div id="marker" class="marker">
+                    <svg viewBox="0 0 64 64" aria-hidden="true">
+                        <circle class="m-bg" cx="32" cy="32" r="29"/>
+                        <circle class="ring" cx="32" cy="32" r="29"/>
+                        <path class="glyph glyph-good" d="M32 13 37.6 25.6 51.3 27.1 41.1 36.4 44 50 32 43.1 20 50 22.9 36.4 12.7 27.1 26.4 25.6Z"/>
+                        <path class="glyph glyph-bad" d="M36 12 20 35H30L27 52 44 28H34Z"/>
+                        <circle class="glyph glyph-neutral" cx="32" cy="32" r="6"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notifyAnchor" class="v-top h-right"></div>
+    <script src="script.js"></script>
+</body>
+</html>
